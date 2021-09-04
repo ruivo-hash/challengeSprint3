@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Epic Task</h1>
+	
+	<h2>Cadastrar Tutor</h2>
+	
+	<form action="/tutor" method="post" th:object="${tutor}"> <!-- th:object referencia o objeto que o form está manipulando --> 
+		
+		<label for="name">Nome</label>
+		<input type="text" name="name" id="name" th:field="*{name}">
+		<span th:errors="*{name}"></span>
+		
+		<label for="email">E-mail</label>
+		<input type="text" name="email" id="email" th:field="*{email}">
+		<span th:errors="*{email}"></span>
+		
+		<label for="pass">Senha</label>
+		<input type="password" name="pass" id="pass" th:field="*{pass}">
+		
+		<button>Cadastrar</button>
+	
+	</form>
+
+</body>
+</html>

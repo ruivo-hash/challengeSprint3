@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Tutores Cadastrados</h1>
+	
+	<a href="/tutor/signup">Novo Tutor</a>
+	
+	<ul th:each="tutor: ${tutores}">
+		<li>
+			<p th:text="${tutor.email}">
+			<p th:text="${tutor.name}">
+		</li>
+	</ul>
+
+</body>
+</html>
